@@ -1,0 +1,33 @@
+#HW.make examples to use the control arguments in R.
+
+#break
+x=0 
+for(i in 1:3)
+{
+  x= x+i
+    print(x)
+    break
+}
+
+#stop
+x=0 
+for(i in 1:3)
+{
+  
+    x= x+i
+    print(x)
+    stop
+}
+
+#HW.rowwise average function
+
+s_rowMean = function(x)
+{
+  if (class(x) != "matrix") stop()
+  v = rep(0,nrow(x))
+  for (i in 1:nrow(x))
+  {
+    v[i] = mean(x[,i])
+  }
+  return(v)
+}
